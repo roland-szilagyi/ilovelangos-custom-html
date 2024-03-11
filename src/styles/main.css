@@ -43,6 +43,34 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
-h1 {
-  border: 1px dotted red;
+header {
+  background-color: peachpuff;
+}
+
+main {
+  background-color: lightblue;
+}
+
+footer {
+  background-color: palevioletred;
+}
+
+.about {
+  background-color: peru;
+}
+
+.contact {
+  background-color: lavender;
+}
+
+.gallery {
+  background-color: lightseagreen;
+}
+
+.menu {
+  background-color: plum;
+}
+
+.stand {
+  background-color: yellowgreen;
 }/*# sourceMappingURL=main.css.map */
