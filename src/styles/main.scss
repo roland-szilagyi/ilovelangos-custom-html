@@ -1,22 +1,28 @@
 // ABSTRACTS
-@import "./abstracts/colors";
-@import "./abstracts/fonts";
 @import "./abstracts/variables";
+@import "./abstracts/media-query";
+@import "./abstracts/functions";
 @import "./abstracts/mixins";
 
 // BASE
-@import "./base/base";
+@import "./base/reset";
+@import "./base/colors";
+@import "./base/typography";
 
 // COMPONENTS
 @import "./components/button";
+@import "./components/carousel";
 
-// LAYOUTS
-@import "./layouts/header";
-@import "./layouts/welcome";
-@import "./layouts/footer";
+// LAYOUT
+@import "./layout/header";
+@import "./layout/navigation";
+@import "./layout/main";
+@import "./layout/footer";
 
-@import "./layouts/about";
-@import "./layouts/contact";
-@import "./layouts/gallery";
-@import "./layouts/menu";
-@import "./layouts/stand";
+// PAGES
+@import "./pages/about";
+@import "./pages/contact";
+@import "./pages/gallery";
+@import "./pages/menu";
+@import "./pages/stand";
+@import "./pages/welcome";

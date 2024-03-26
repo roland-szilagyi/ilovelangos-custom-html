@@ -1,0 +1,46 @@
+$retrovintage: "../assets/fonts";
+@font-face {
+  src: url(#{$retrovintage}/yellowtail-regular.ttf);
+  font-family: 'font1';
+}
+
+$opensans: "../assets/fonts";
+@font-face {
+  src: url(#{$opensans}/opensans-variable.ttf);
+  font-family: 'font2';
+}
+
+.title {
+  font-family: 'font1';
+  font-size: 5rem;
+  text-shadow: 1px 1px 1px black;
+  font-weight: 400;
+  color: $color-primary;
+}
+
+.subtitle {
+  font-family: 'font2';
+  font-size: 1.2rem;
+  color: $color-primary;
+}
+
+.text {
+  font-family: 'font2';
+  font-size: 1rem;
+  font-weight: 400;
+  color: $color-tertiary;
+}
+
+// FONT-SIZE
+$font-size-base: 1rem;
+$font-size-xs: 1.2rem;
+$font-size-sm: 1.4rem;
+$font-size-md: 2rem;
+$font-size-lg: 2.5rem;
+$font-size-xl: 3rem;
+$font-size-xxl: 5rem;
+
+// FONT-WEIGHT
+$font-weight-sm: 100;
+$font-weight-md: 600;
+$font-weight-lg: 900;

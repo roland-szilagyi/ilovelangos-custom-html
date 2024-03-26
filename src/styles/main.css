@@ -1,15 +1,32 @@
-@font-face {
-  src: url(../assets/fonts/bubblegumsans-regular.ttf);
-  font-family: "font1";
+@charset "UTF-8";
+/* -------------------------------------------- */
+/* példa használat:
+@include padding(1px, null, 3px, 4px);
+@include margin(1px, 2px, null, 4px);
+*/
+/* -------------------------------------------- */
+/* példa használat:
+.foo {
+  @include screen(large) {
+    width: 20%;
+  }
+  @include screen(medium) {
+    width: 40%;
+  }
+  @include screen(custom, min, 1320) {
+    background-color: aqua;
+  }
 }
-@font-face {
-  src: url(../assets/fonts/opensans-variable.ttf);
-  font-family: "font2";
-}
-/* --- DECORATION --- */
-/* --- FONTS --- */
-/* --- SHADOW--- */
-/* --- BOX MODEL --- */
+*/
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/* .container-with-floated-children {
+  @extend %clearfix;
+} */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -23,6 +40,7 @@
 body {
   font-size: 15px;
   line-height: 1.2;
+  font-family: sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -43,12 +61,73 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
-header {
-  background-color: peachpuff;
+.color-primary {
+  color: red;
 }
 
-main {
-  background-color: lightblue;
+.color-secondary {
+  color: green;
+}
+
+.color-tertiary {
+  color: blue;
+}
+
+@font-face {
+  src: url(../assets/fonts/yellowtail-regular.ttf);
+  font-family: "font1";
+}
+@font-face {
+  src: url(../assets/fonts/opensans-variable.ttf);
+  font-family: "font2";
+}
+/* kell-e egyáltalán? ...
+// FONT-SIZE
+$font-size-base: 1rem;
+$font-size-xs: 1.2rem;
+$font-size-sm: 1.4rem;
+$font-size-md: 2rem;
+$font-size-lg: 2.5rem;
+$font-size-xl: 3rem;
+$font-size-xxl: 5rem;
+
+// FONT-FAMILY
+$font-family-1: 'font1';
+$font-family-2: 'font2';
+
+// FONT-WEIGHT
+$font-weight-sm: 100;
+$font-weight-md: 600;
+$font-weight-lg: 900;
+
+// LETTER-SPACING
+$letter-spacing-sm: 0.1rem;
+$letter-spacing-md: 0.2rem;
+$letter-spacing-lg: 0.3rem;
+
+// LINE-HEIGHT
+$line-height-sm: 1.2;
+$line-height-md: 1.4;
+$line-height-lg: 1.6;
+*/
+header {
+  outline: 1px solid lightgrey;
+  display: flex;
+  height: 3rem;
+}
+header .logo__container {
+  display: flex;
+}
+header .logo__container h2 {
+  font-family: "font1";
+  font-size: 2rem;
+  text-shadow: 1px 1px 1px grey;
+  font-weight: 400;
+}
+header .logo__container img {
+  width: 100%;
+  height: auto;
+  padding: 0.5rem;
 }
 
 footer {
@@ -61,6 +140,65 @@ footer {
 
 .contact {
   background-color: lavender;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact .title__cont {
+  outline: 1px solid lightgrey;
+}
+.contact .details__cont {
+  outline: 1px solid lightsalmon;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  font-family: "font2";
+  font-size: 1rem;
+  font-weight: 400;
+  color: darkslategrey;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+
+.text--title {
+  font-family: "font1";
+  font-size: 5rem;
+  text-shadow: 1px 1px 1px black;
+  font-weight: 400;
+  color: #D80E0E;
+  margin-top: 3rem;
+  margin-right: 1rem;
+  margin-bottom: 3rem;
+  margin-left: 1rem;
+}
+
+.text--subtitle {
+  font-family: "font2";
+  font-size: 1.2rem;
+  color: #e62727;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+
+.icon {
+  width: 2rem;
+  height: auto;
+  margin-right: 0.25rem;
+}
+
+.logo-title {
+  font-family: "font1";
+  font-size: 2rem;
+  text-shadow: 1px 1px 1px grey;
+  font-weight: 400;
 }
 
 .gallery {
@@ -69,8 +207,42 @@ footer {
 
 .menu {
   background-color: plum;
+  display: flex;
+  flex-direction: column;
+}
+.menu__title {
+  outline: 1px solid lightsalmon;
+  display: flex;
+  justify-content: center;
+}
+.menu__cont {
+  outline: 1px solid lightsalmon;
+  display: flex;
+  justify-content: space-evenly;
+}
+.menu__cont .details {
+  outline: 1px solid yellow;
+  width: 40vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu__cont .details__price {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  outline: 1px solid yellow;
+}
+.logo-img {
+  outline: 1px solid yellow;
+  width: 7em;
+  height: auto;
 }
 
 .stand {
   background-color: yellowgreen;
+}
+
+main {
+  background-color: lightblue;
 }/*# sourceMappingURL=main.css.map */
