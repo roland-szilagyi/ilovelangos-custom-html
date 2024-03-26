@@ -1,7 +1,6 @@
 // ABSTRACTS
 @import "./abstracts/variables";
 @import "./abstracts/media-query";
-@import "./abstracts/functions";
 @import "./abstracts/mixins";
 
 // BASE
@@ -10,8 +9,6 @@
 @import "./base/typography";
 
 // COMPONENTS
-@import "./components/button";
-@import "./components/carousel";
 
 // LAYOUT
 @import "./layout/header";
